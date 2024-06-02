@@ -1,3 +1,22 @@
+/* <--------------------NavBar-Scroll-Effect-------------------> */
+
+window.onscroll = function () { NavScroll() };
+let navbar = document.getElementById("navbar");
+
+function NavScroll() {
+
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+        navbar.classList.add("nav-scroll");
+        navbar.classList.remove("nav-color");
+    }
+    else {
+        navbar.classList.remove("nav-scroll");
+        navbar.classList.add("nav-color");
+    }
+}
+
+/* <--------------------NavBar-Items-------------------> */
+
 let nav_items = document.getElementsByClassName("nav-item");
 let nav_links = document.getElementsByClassName("nav-link");
 
@@ -15,19 +34,20 @@ for (const item of nav_items) {
     });
 }
 
+/* <--------------------NavBar-After-Collapse-------------------> */
+
 let side_nav = document.getElementById("side-nav");
 let side_content = document.getElementById("side-content");
-let close_btn = document.getElementById("close");
-let open_btn = document.getElementById("toggle-btn");
 
 function openNav() {
     side_nav.style.width = "100%";
     setTimeout(() => {
-        side_content.style.display = "block";    
-    }, 70);
+        side_content.style.display = "block";
+    }, 220);
 }
 
 function closeNav() {
     side_content.style.display = "none";
     side_nav.style.width = "0";
 }
+
