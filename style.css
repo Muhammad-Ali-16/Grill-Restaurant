@@ -1,3 +1,5 @@
+/* <--------------------Basic-Styling-------------------> */
+
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 * {
@@ -40,6 +42,8 @@ a {
     color: #eee;
 }
 
+/* <--------------------Common-Styling-------------------> */
+
 .btn-common {
     padding: 16px 35px;
     border: none;
@@ -63,7 +67,7 @@ a {
 }
 
 .btn-common:hover {
-    color: var(--black-transparent-2);
+    color: var(--eerie-black-2);
 }
 
 .btn-common::after {
@@ -102,6 +106,21 @@ a {
     transform: skewX(45deg) scaleX(1);
 }
 
+.section-common{
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+/* <--------------------TopBar-Start-------------------> */
+
+.header-main {
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+}
 
 .topbar-main {
     height: 5vh;
@@ -139,15 +158,23 @@ a {
     border: 1px solid var(--color-silver);
 }
 
-.header-main {
-    position: absolute;
-    width: 100%;
-    z-index: 99;
-}
+/* <--------------------NavBar-Start-------------------> */
 
 .nav-color {
     background: transparent;
     color: white;
+}
+
+.nav-scroll{
+    background: var(--smoky-black-1);
+    color: #eee;
+    position: fixed;
+    transform: translateY(90px);
+    top: -99px;
+    left: 0;
+    width: 100%;
+    transition: .4s all;
+    padding: 10px 0;
 }
 
 .nav-item {
@@ -210,10 +237,12 @@ a {
     transition: .6s all ease;
 }
 
-#toggle-btn{
+#toggle-btn {
     color: #eee;
     font-size: 28px;
 }
+
+/* <--------------------NavBar-After-Collapse-------------------> */
 
 .side-nav-main {
     height: 100vh;
@@ -223,6 +252,7 @@ a {
     z-index: 999;
     top: 0;
     transition: .4s all;
+    overflow-y: scroll;
 }
 
 .side-content {
@@ -277,14 +307,33 @@ a {
     position: relative;
 }
 
+.side-nav-contact {
+    margin: 50px 0 0 0;
+    text-align: center;
+}
 
+.side-nav-contact h2 {
+    font-size: 35px;
+    color: var(--golden-color);
+    font-family: 'Forum', cursive;
+    margin-top: 20px;
+}
 
+.side-nav-contact h6{
+    line-height: 1.7;
+    color: var(--color-silver);
+}
 
-
+/* <--------------------Hero-Section-Start-------------------> */
 
 .hero-main {
     height: 100vh;
     background: url(Images/hero-slider-1.jpg) no-repeat center center;
     background-size: cover;
-    position: relative;
+}
+
+/* <--------------------Menu-Section-Start-------------------> */
+
+.menu-main{
+    height: 200vh;
 }
