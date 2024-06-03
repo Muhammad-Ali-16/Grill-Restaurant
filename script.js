@@ -51,3 +51,26 @@ function closeNav() {
     side_nav.style.width = "0";
 }
 
+/* <--------------------Hero-Slider-------------------> */
+
+let Slider_Items = document.getElementsByClassName("slider-item");
+let i = 0;
+
+function SlideUpdate() {
+
+    for (const Item of Slider_Items) {
+        Item.classList.remove("active");
+    }
+
+    let Slider = Slider_Items[i];
+    Slider.classList.toggle("active");
+
+    if (i < Slider_Items.length - 1) {
+        i++;
+    }
+    else {
+        i = 0;
+    }
+}
+
+setInterval(SlideUpdate, 4000);
