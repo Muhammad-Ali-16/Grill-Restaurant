@@ -73,4 +73,4 @@ function SlideUpdate() {
     }
 }
 
-setInterval(SlideUpdate, 4000);
+setInterval(SlideUpdate, 5500);
