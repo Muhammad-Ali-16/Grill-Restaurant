@@ -118,6 +118,48 @@ ul {
     padding-bottom: 80px;
 }
 
+.common-subtitle {
+    color: var(--golden-color);
+    font-size: larger;
+    letter-spacing: 4px;
+}
+
+.common-subtitle::after {
+    content: url(Images/separator.svg);
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.common-title {
+    font-family: 'Forum', cursive;
+    letter-spacing: 2px;
+}
+
+.common-btn-effect {
+    color: var(--golden-color);
+    font-size: small;
+    background: transparent;
+    border: none;
+}
+
+.common-btn-effect::after {
+    content: "";
+    display: ruby-text;
+    height: 5px;
+    width: 75%;
+    border-top: 1px solid var(--golden-color);
+    border-bottom: 1px solid var(--golden-color);
+    margin: 0 auto;
+    transform: scaleX(0);
+    transition: .4s all;
+}
+
+.common-btn-effect:hover:after {
+    transform: scaleX(1.5);
+}
+
 /* <--------------------TopBar-Start-------------------> */
 
 .header-main {
@@ -170,7 +212,7 @@ ul {
 }
 
 .nav-scroll {
-    background: var(--smoky-black-1);
+    background: var(--eerie-black-4);
     color: #eee;
     position: fixed;
     transform: translateY(90px);
@@ -331,7 +373,7 @@ ul {
 /* <--------------------Hero-Section-Start-------------------> */
 
 .hero-main {
-    height: auto;
+    height: 100vh;
 }
 
 .slider-bg {
@@ -515,19 +557,103 @@ ul {
 /* <--------------------Menu-Section-Start-------------------> */
 
 .menu-main {
-    height: 200vh;
-    background: var(--color-grey);
+    height: auto;
+    background: var(--smoky-black-2);
+    position: relative;
 }
 
+.menu-section-content-main {
+    padding-top: 80px;
+    position: relative;
+}
 
+.menu-section-content-main::before {
+    content: url(Images/menu-shape-2.png);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
 
+.menu-section-content-main::after {
+    content: url(Images/menu-shape-1.png);
+    display: block;
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    transform: rotate(360deg);
+}
 
+.menu-content {
+    text-align: center;
+    color: #eee;
+    position: relative;
+}
 
+.menu-main .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.menu-main .row .col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.upper-card {
+    transform: translateY(-100px);
+}
 
+.menu-cards {
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
 
+.cards-content h3 {
+    color: #eee;
+    font-family: 'Forum', cursive;
+    letter-spacing: 2px;
+}
 
+.menu-cards::before {
+    content: url(Images/img-pattern.svg);
+    position: absolute;
+    width: 140px;
+    height: 100%;
+    bottom: 5%;
+    right: 25%;
+    z-index: -1;
+    transition: .4s all;
+}
+
+.menu-cards:is(:hover, :focus ):before {
+    transform: rotateY(0.5turn) translateX(5%);
+    transition-delay: .2s;
+}
+
+.card-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, transparent 0%, #999 100%);
+    transform: skew(-0.08turn) translateX(-180%);
+}
+
+.card-img:is(:hover, :focus)::after {
+    transform: skew(-0.08turn) translateX(275%);
+    transition: .6s all;
+}
 
 
 
@@ -545,6 +671,18 @@ ul {
     }
 }
 
+@media (max-width:992px) and (min-width:768px) {
+    .menu-cards::before {
+        width: 100px;
+    }
+}
+
+@media (max-width:768px) and (min-width:576px) {
+    .menu-cards::before {
+        width: 115px;
+    }
+}
+
 @media screen and (max-width:768px) {
     .hero-btn-2 {
         width: 85px;
@@ -557,4 +695,7 @@ ul {
         width: 85px;
     }
 
+    .upper-card {
+        transform: translateY(0);
+    }
 }
