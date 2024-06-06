@@ -116,6 +116,7 @@ ul {
     width: 100%;
     margin: 0 auto;
     padding-bottom: 80px;
+    color: #eee;
 }
 
 .common-subtitle {
@@ -629,7 +630,7 @@ ul {
     transition: .4s all;
 }
 
-.menu-cards:is(:hover, :focus ):before {
+.menu-cards:is(:hover, :focus):before {
     transform: rotateY(0.5turn) translateX(5%);
     transition-delay: .2s;
 }
@@ -654,6 +655,86 @@ ul {
     transform: skew(-0.08turn) translateX(275%);
     transition: .6s all;
 }
+
+/* <--------------------About-Section-Start-------------------> */
+
+.about-main {
+    height: auto;
+    background: var(--smoky-black-3);
+
+}
+
+.about-section-content-main {
+    padding-top: 120px;
+    position: relative;
+}
+
+.about-text {
+    margin-top: 40px;
+    font-size: small;
+    line-height: 2;
+}
+
+.about-content h6 {
+    margin-top: 40px;
+    color: var(--golden-color);
+}
+
+.about-content h5 {
+    color: #999;
+    font-weight: 500;
+}
+
+.about-figures {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.about-banner-img {
+    position: relative;
+}
+
+.about-banner-img::after {
+    content: url(Images/about-badge-2.png);
+    display: block;
+    position: absolute;
+    top: -70px;
+    left: 30px;
+}
+
+.about-banner-img::before {
+    content: url(Images/about-badge.png);
+    display: block;
+    position: absolute;
+    top: -70px;
+    left: 30px;
+    transform: rotate(0deg);
+    animation: rotate 17s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -683,6 +764,26 @@ ul {
     }
 }
 
+@media screen and (min-width:992px) {
+
+    .about-figures {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width:992px){
+    .about-figures{
+        margin-top: 100px;
+    }
+
+    .about-section-content-main{
+        padding-top: 50px;
+    }
+} 
+
 @media screen and (max-width:768px) {
     .hero-btn-2 {
         width: 85px;
@@ -697,5 +798,9 @@ ul {
 
     .upper-card {
         transform: translateY(0);
+    }
+
+    .menu-content,.about-content{
+        margin: 0 15px;
     }
 }
