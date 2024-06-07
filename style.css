@@ -817,8 +817,8 @@ ul {
     margin: 0 20px;
 }
 
-.items-content-inner h4{
-    font-family:'Forum', cursive ;
+.items-content-inner h4 {
+    font-family: 'Forum', cursive;
 }
 
 .items-content-inner h4::after {
@@ -826,26 +826,61 @@ ul {
     display: inline;
     margin-left: 10px;
     color: var(--golden-color);
-    border-left:2px solid var(--golden-color) ;
+    border-left: 2px solid var(--golden-color);
     padding-left: 10px;
 }
 
-.items-content-inner p{
+.items-content-inner p {
     font-size: small;
     color: #999;
     font-weight: 500;
 }
 
-.items-content h6 span{
+.items-content h6 span {
     color: var(--golden-color);
 }
 
+/* <--------------------Testimonials-Section-Start-------------------> */
 
+.testimonial-main {
+    height: 100vh;
+    background-image: url(Images/testimonial-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 
+.testimonial-quote {
+    width: 65%;
+    padding-top: 120px;
+    font-size: 43px;
+    margin: 0 auto;
+    font-family: 'Forum', cursive;
+}
 
+.testimonial-seperators{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
 
+.seperator{
+    height: 12px;
+    width: 12px;
+    background-color: transparent;
+    border: 1px solid var(--golden-color);
+    transform: rotate(45deg);
+    margin: 0 3px;
+}
 
+.testimonial-avatar{
+    display: flex;
+    justify-content: center;
+}
 
+.testimonial-section-content-main h6{
+    color: var(--golden-color);
+}
 
 
 
@@ -912,6 +947,12 @@ ul {
         text-align: center;
 
     }
+
+    .testimonial-quote {
+        width: 75%;
+        font-size: 40px;
+    }
+
 }
 
 @media screen and (max-width:768px) {
@@ -934,11 +975,21 @@ ul {
     .about-content {
         margin: 0 15px;
     }
+
+    .testimonial-quote {
+        width: 85%;
+        font-size: 38px;
+    }
+
 }
 
 @media screen and (max-width:500px) {
     .items-common {
         margin: 15px 0;
     }
-    
+
+    .testimonial-quote {
+        width: 95%;
+        font-size: 32px;
+    }
 }
