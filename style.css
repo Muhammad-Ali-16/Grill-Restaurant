@@ -843,7 +843,7 @@ ul {
 /* <--------------------Testimonials-Section-Start-------------------> */
 
 .testimonial-main {
-    height: 100vh;
+    height: 120vh;
     background-image: url(Images/testimonial-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -858,13 +858,13 @@ ul {
     font-family: 'Forum', cursive;
 }
 
-.testimonial-seperators{
+.testimonial-seperators {
     display: flex;
     justify-content: center;
     margin: 30px 0;
 }
 
-.seperator{
+.seperator {
     height: 12px;
     width: 12px;
     background-color: transparent;
@@ -873,14 +873,126 @@ ul {
     margin: 0 3px;
 }
 
-.testimonial-avatar{
+.testimonial-avatar {
     display: flex;
     justify-content: center;
 }
 
-.testimonial-section-content-main h6{
+.testimonial-section-content-main h6 {
     color: var(--golden-color);
 }
+
+/* <--------------------Reservation-Section-Start-------------------> */
+
+.reservation-main {
+    height: auto;
+    width: 100%;
+    background: var(--eerie-black-2);
+    padding-bottom: 0px;
+}
+
+.reservation-main::after{
+    content: url(Images/reservation-shape.png);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+}
+
+.reservation-section-content-main {
+    height: auto;
+    width: 80%;
+    background: var(--smoky-black-1);
+    top: -250px;
+    position: relative;
+}
+
+.reservation-form-main {
+    padding: 70px 0 15px 0;
+}
+
+.reservation-form-main h6 span {
+    color: var(--golden-color);
+}
+
+.reservation-form {
+    margin: 40px 20px;
+}
+
+.form-control {
+    height: 50px;
+    margin: 0 auto;
+    background-color: #272626;
+    border: 1px solid #363636;
+    padding: 0 15px;
+    color: #9e9b9b;
+}
+
+.form-control:focus {
+    background-color: #272626;
+    border: 1px solid #363636;
+    color: #9e9b9b;
+}
+
+.form-control::placeholder {
+    color: #9e9b9b;
+}
+
+.form-area {
+    height: 200px;
+}
+
+.reservation-contact-main {
+    width: 100%;
+    background: url(Images/reservation-pattren.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: auto;
+    padding: 70px 0 15px 0;
+}
+
+.reservation-contact-main h6 {
+    color: var(--golden-color);
+    font-size: medium;
+
+}
+
+.reservation-contact-main p {
+    color: #999;
+}
+
+.reservation-contact-main p::after {
+    content: "";
+    display: block;
+    height: 12px;
+    width: 12px;
+    border: 1px solid var(--golden-color);
+    transform: rotate(45deg);
+    margin: 0 auto;
+    margin-block-start: 25px;
+    margin-block-end: 25px;
+}
+
+/* <--------------------Feature-Section-Start-------------------> */
+
+.feature-main {
+    height: 100vh;
+    width: 100%;
+    background: var(--eerie-black-2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
