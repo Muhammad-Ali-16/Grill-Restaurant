@@ -1,12 +1,25 @@
-/* <--------------------Basic-Styling-------------------> */
-/*--fontFamily-forum: 'Forum', cursive;
---fontFamily-dm_sans: 'DM Sans', sans-serif;
-  font-family: "Josefin Sans", sans-serif;
-  font-family: "Rubik", sans-serif;
+/*
+<---------------About-This-Template-------------->
+
+Theme Name: Grill-Restaurant  
+Theme URL: https://muhammad-ali-16.github.io/Grill-Restaurant/
+Author:Muhammad Ali Raza
+Version: 1.0
+
+<---------------Table-Of-Contents-------------->
+
+<---------------Font-Family-Used-------------->
+
+1:-[ 'Forum', cursive ]
+2:-[ 'DM Sans', sans-serif ]
+3:-[ "Josefin Sans", sans-serif ]
+4:-[ "Rubik", sans-serif ]
+
 */
 
-
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* <--------------------Basic-Styling-------------------> */
 
 * {
     margin: 0;
@@ -159,6 +172,24 @@ ul {
 
 .common-btn-effect:hover:after {
     transform: scaleX(1.5);
+}
+
+/* <--------------------Scroll-Bar-------------------> */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #444444;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--golden-color);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--golden-color);
 }
 
 /* <--------------------TopBar-Start-------------------> */
@@ -891,7 +922,7 @@ ul {
     padding-bottom: 0px;
 }
 
-.reservation-main::after{
+.reservation-main::after {
     content: url(Images/reservation-shape.png);
     display: block;
     position: absolute;
@@ -977,9 +1008,56 @@ ul {
 /* <--------------------Feature-Section-Start-------------------> */
 
 .feature-main {
-    height: 100vh;
+    height: auto;
     width: 100%;
     background: var(--eerie-black-2);
+}
+
+.feature-main::after{
+    content: url(Images/feature-shape-1.png);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.feature-cards-main {
+    margin-top: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.feature-cards-main .card:nth-child(2n+1) {
+    background: var(--eerie-black-1);
+}
+
+.feature-cards-main .card:nth-child(2n) {
+    background: var(--smoky-black-3);
+}
+
+
+.feature-cards-main .card {
+    width: 260px;
+    border: none;
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.feature-cards-main .card-img {
+    width: 90px;
+    margin: 0 auto;
+    margin: 30px 0 10px 0;
+}
+
+.feature-cards-main .card-title {
+    font-family: 'Forum', cursive;
+    color: #eee;
+}
+
+.feature-cards-main .card-text {
+    font-size: small;
+    color: #9e9b9b;
 }
 
 
@@ -999,10 +1077,12 @@ ul {
 
 
 
-
-
-
 /* <--------------------Media-Quries-------------------> */
+@media (max-width:1230px) and (min-width:992px) {
+    .feature-cards-main .card {
+        width: 230px;
+        }
+}
 
 @media (max-width:1075px) and (min-width:992px) {
     .content-main h6 {
