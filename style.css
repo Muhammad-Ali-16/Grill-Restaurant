@@ -1013,7 +1013,7 @@ ul {
     background: var(--eerie-black-2);
 }
 
-.feature-main::after{
+.feature-main::after {
     content: url(Images/feature-shape-1.png);
     display: block;
     position: absolute;
@@ -1060,13 +1060,110 @@ ul {
     color: #9e9b9b;
 }
 
+/* <--------------------Events-Section-Start-------------------> */
 
+.events-main {
+    height: auto;
+    width: 100%;
+    background: var(--smoky-black-3);
+}
 
+.events-section-content-main {
+    padding-top: 90px;
+    position: relative;
+}
 
+.events-cards-main {
+    position: relative;
+    overflow: hidden;
+}
 
+.event-img-main {
+    position: relative;
+}
 
+.event-img {
+    transition: .5s;
+    width: 100%;
+    position: relative;
+}
 
+.events-cards-main:hover .event-img {
+    transform: scale(1.07);
+}
 
+.events-cards-main::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, transparent 0%, #999 100%);
+    transform: skew(-0.08turn) translateX(-180%);
+}
+
+.events-cards-main:hover::after {
+    transform: skew(-0.08turn) translateX(275%);
+    transition: .6s all;
+}
+
+.event-content {
+    position: absolute;
+    background: var(--black-transparent-1);
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.event-card-content-top {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    width: auto;
+    left: 17px;
+    background: var(--smoky-black-3);
+    border-radius: 6px;
+}
+
+.event-card-content-top h6 {
+    color: var(--golden-color);
+    padding: 10px 10px 0px 10px;
+    letter-spacing: 1.5px;
+}
+
+.event-card-content-bottom {
+    position: absolute;
+    z-index: 2;
+    bottom: 25px;
+    width: 90%;
+    left: 17px;
+}
+
+.event-card-content-bottom h6 {
+    color: var(--golden-color);
+    letter-spacing: 3.5px;
+    font-weight: 400;
+}
+
+.event-card-content-bottom h4 {
+    font-size: larger;
+    font-family: 'Forum', cursive;
+}
+
+.event-btn-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+/* <--------------------Footer-Section-Start-------------------> */
+
+.footer-main {
+    height: 100vh;
+    width: 100%;
+    background: var(--smoky-black-2);
+}
 
 
 
@@ -1081,7 +1178,7 @@ ul {
 @media (max-width:1230px) and (min-width:992px) {
     .feature-cards-main .card {
         width: 230px;
-        }
+    }
 }
 
 @media (max-width:1075px) and (min-width:992px) {
