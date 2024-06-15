@@ -6,8 +6,6 @@ Theme URL: https://muhammad-ali-16.github.io/Grill-Restaurant/
 Author:Muhammad Ali Raza
 Version: 1.0
 
-<---------------Table-Of-Contents-------------->
-
 <---------------Font-Family-Used-------------->
 
 1:-[ 'Forum', cursive ]
@@ -1160,21 +1158,143 @@ ul {
 /* <--------------------Footer-Section-Start-------------------> */
 
 .footer-main {
-    height: 100vh;
+    height: auto;
     width: 100%;
-    background: var(--smoky-black-2);
+    background: url(Images/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+.footer-section-content-main {
+    padding-top: 120px;
+}
+
+.footer-form {
+    background: var(--smoky-black-1);
+    height: 580px;
+    width: 100%;
+    position: relative;
+}
+
+.form-pattren {
+    background: url(Images/footer-form-bg.png);
+    position: absolute;
+    display: block;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.form-pattren::before {
+    content: url(Images/footer-form-pattern.svg);
+    position: absolute;
+    width: 12px;
+    top: 0;
+}
+
+.form-pattren::after {
+    content: url(Images/footer-form-pattern.svg);
+    position: absolute;
+    width: 12px;
+    top: 0;
+    right: 0;
+}
+
+.footer-social-list,
+.footer-list {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: 2.5;
+    position: relative;
+    top: 25%;
+}
+
+.footer-links .footer-item .footer-link{
+    text-transform: uppercase;
+    font-family: "Rubik", sans-serif;
+    font-size: small;
+    color: #9e9b9b;
+    letter-spacing: 2.5px;
+    position: relative;
+    transition: .2s;
+}
+
+.footer-item .footer-link::before {
+    content: "";
+    height: 6px;
+    width: 75%;
+    background: transparent;
+    position: absolute;
+    border-bottom: 1px solid #9e9b9b;
+    border-top: 1px solid #9e9b9b;
+    bottom: -12px;
+    left: 8px;
+    transform: scaleX(0);
+    transition: .6s all ease;
+}
+
+.footer-item .footer-link:hover::before {
+    transform: scaleX(1.4);
+    color: #9e9b9b;
+}
+
+.form-content {
+    text-align: center;
+    position: relative;
+    padding: 35px;
+}
+
+.form-content .testimonial-seperators {
+    margin: 15px 0;
+}
+
+.form-content p {
+    color: #9e9b9b;
+    font-size: small;
+    font-family: "Rubik", sans-serif;
+}
+
+.form-content p span {
+    color: #eee;
+}
+
+.form-content h3 {
+    font-family: 'Forum', cursive;
+}
+
+.form-content .form-btn {
+    width: 120px;
+    border: none;
+    background: var(--golden-color);
+    color: var(--eerie-black-1);
+    font-weight: 400;
+    font-family: "Rubik", sans-serif;
+    letter-spacing: 1px;
+}
+
+.footer-bottom{
+    color: #9e9b9b;
+}
+
+.footer-bottom span{
+    color: var(--golden-color);
+}
+
+.footer-bottom a{
+    color: #9e9b9b;
+    text-decoration: underline;
 }
 
 
-
-
-
-
-
-
-
-
-/* <--------------------Media-Quries-------------------> */
+/* <--------------------Media-Quries-------------------> 
+1:-[ 'Forum', cursive ]
+2:-[ 'DM Sans', sans-serif ]
+3:-[ "Josefin Sans", sans-serif ]
+4:-[ "Rubik", sans-serif ]
+*/
 @media (max-width:1230px) and (min-width:992px) {
     .feature-cards-main .card {
         width: 230px;
@@ -1269,6 +1389,21 @@ ul {
         width: 85%;
         font-size: 38px;
     }
+
+    .footer-social-list,
+    .footer-list {
+        top: 0;
+        margin-bottom: 25px;
+    }
+
+    .footer-section-content-main {
+        padding-top: 35px;
+    }
+
+    .footer-social-list{
+        margin-top: 35px;
+    }
+
 
 }
 
